@@ -5,13 +5,12 @@ import java.util.List;
 
 public class SolicitudRebaja {
 
-    protected List<Vehiculo> vehiculosEnStock =
-            new ArrayList<Vehiculo>();
+    protected List<Vehiculo> vehiculosEnStock = new ArrayList<>();
     protected long hoy;
     protected long tiempoEnStock;
     protected double tasaDescuento;
-    public SolicitudRebaja(long hoy, long tiempoEnStock,
-                           double tasaDescuento)
+
+    public SolicitudRebaja(long hoy, long tiempoEnStock, double tasaDescuento)
     {
         this.hoy = hoy;
         this.tiempoEnStock = tiempoEnStock;
@@ -21,9 +20,9 @@ public class SolicitudRebaja {
     {
         vehiculosEnStock.clear();
         for (Vehiculo vehiculo: vehiculos)
-            if (vehiculo.getTiempoEnStock(hoy) >=
-                    tiempoEnStock)
+            if (vehiculo.getTiempoEnStock(hoy) >= tiempoEnStock)
                 vehiculosEnStock.add(vehiculo);
+
         for (Vehiculo vehiculo: vehiculosEnStock)
             vehiculo.modificaPrecio(1.0 - tasaDescuento);
     }

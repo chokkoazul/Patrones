@@ -5,10 +5,8 @@ import java.util.List;
 
 public class Catalogo {
 
-    protected List<Vehiculo> vehiculosStock =
-            new ArrayList<Vehiculo>();
-    protected List<SolicitudRebaja> solicitudes =
-            new ArrayList<SolicitudRebaja>();
+    protected List<Vehiculo> vehiculosStock = new ArrayList<>();
+    protected List<SolicitudRebaja> solicitudes = new ArrayList<>();
     public void ejecutaSolicitudRebaja(SolicitudRebaja solicitud)
     {
         solicitudes.add(0, solicitud);

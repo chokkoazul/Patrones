@@ -5,8 +5,7 @@ public class Vehiculo {
     protected String nombre;
     protected long fechaEntradaStock;
     protected double precioVenta;
-    public Vehiculo(String nombre, long fechaEntradaStock,
-                    double precioVenta)
+    public Vehiculo(String nombre, long fechaEntradaStock, double precioVenta)
     {
         this.nombre = nombre;
         this.fechaEntradaStock = fechaEntradaStock;
@@ -18,12 +17,10 @@ public class Vehiculo {
     }
     public void modificaPrecio(double coeficiente)
     {
-        this.precioVenta = 0.01 * Math.round(coeficiente *
-                this.precioVenta * 100);
+        this.precioVenta = 0.01 * Math.round(coeficiente * this.precioVenta * 100);
     }
     public void visualiza()
     {
-        System.out.println(nombre + " precio: " + precioVenta +
-                " fecha entrada stock " + fechaEntradaStock);
+        System.out.println(nombre + " precio: " + precioVenta + " fecha entrada stock " + fechaEntradaStock);
     }
 }

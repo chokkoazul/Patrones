@@ -14,28 +14,22 @@ public class Usuario {
         System.out.println("Visualizacion inicial del catalogo");
         catalogo.visualiza();
         System.out.println();
-        SolicitudRebaja solicitudRebaja = new SolicitudRebaja
-                (10, 5, 0.1);
+        SolicitudRebaja solicitudRebaja = new SolicitudRebaja(10, 5, 0.1);
         catalogo.ejecutaSolicitudRebaja(solicitudRebaja);
-        System.out.println("Visualizacion del catalogo tras " +
-        "ejecutar la primera solicitud");
+        System.out.println("Visualizacion del catalogo tras " + "ejecutar la primera solicitud");
         catalogo.visualiza();
         System.out.println();
-        SolicitudRebaja solicitudRebaja2 = new SolicitudRebaja
-                (10, 5, 0.5);
+        SolicitudRebaja solicitudRebaja2 = new SolicitudRebaja(10, 5, 0.5);
         catalogo.ejecutaSolicitudRebaja(solicitudRebaja2);
-        System.out.println("Visualizacion del catalogo tras " +
-                "ejecutar la segunda solicitud");
+        System.out.println("Visualizacion del catalogo tras " + "ejecutar la segunda solicitud");
         catalogo.visualiza();
         System.out.println();
         catalogo.anulaSolicitudRebaja(1);
-        System.out.println("Visualizacion del catalogo tras " +
-                "anular la primera solicitud");
+        System.out.println("Visualizacion del catalogo tras " + "anular la primera solicitud");
         catalogo.visualiza();
         System.out.println();
         catalogo.restableceSolicitudRebaja(1);
-        System.out.println("Visualizacion del catalogo tras " +
-                "restablecer la primera solicitud");
+        System.out.println("Visualizacion del catalogo tras " + "restablecer la primera solicitud");
         catalogo.visualiza();
         System.out.println();
     }
