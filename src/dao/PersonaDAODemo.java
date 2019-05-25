@@ -6,7 +6,7 @@ public class PersonaDAODemo {
 
     public static void main(String... args){
         Scanner reader = new Scanner(System.in);
-        System.out.print("Selecciona la base de datos Local (1) o Producción (2):");
+        System.out.print("Selecciona la base de datos Mysql (1) o Oracle (2):");
         String seleccion = reader.next();
         PersonaDAO personaDAO;
 

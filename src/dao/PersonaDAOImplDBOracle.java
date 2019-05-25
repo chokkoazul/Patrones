@@ -3,9 +3,10 @@ package dao;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonaDAOImplDBProd implements PersonaDAO {
+public class PersonaDAOImplDBOracle implements PersonaDAO {
     @Override
     public List<Persona> listasTodos() {
+        System.out.println("**********Listando datos de Oracle********");
         List<Persona> personas = new ArrayList<>();
         Persona persona = new Persona();
         persona.setId(1);
@@ -37,16 +38,16 @@ public class PersonaDAOImplDBProd implements PersonaDAO {
 
     @Override
     public void agregarPersona(Persona persona) {
-        System.out.println("Se agrega persona " + persona.toString() + " a base de datos de produccion...");
+        System.out.println("Se agrega persona " + persona.toString() + " a base de datos de oracle...");
     }
 
     @Override
     public void actualizarPersona(Persona persona) {
-        System.out.println("Se actualiza persona " + persona.toString() + " a base de datos de produccion...");
+        System.out.println("Se actualiza persona " + persona.toString() + " a base de datos de oracle...");
     }
 
     @Override
     public void eliminarPersona(int id) {
-        System.out.println("Se elimina persona con id " + id + " a base de datos de produccion...");
+        System.out.println("Se elimina persona con id " + id + " a base de datos de oracle...");
     }
 }

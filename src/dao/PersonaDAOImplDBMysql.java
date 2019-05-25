@@ -3,9 +3,10 @@ package dao;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonaDAOImplDBLocal implements PersonaDAO {
+public class PersonaDAOImplDBMysql implements PersonaDAO {
     @Override
     public List<Persona> listasTodos() {
+        System.out.println("**********Listando datos de Mysql********");
         List<Persona> personas = new ArrayList<>();
         Persona persona = new Persona();
         persona.setId(1);
@@ -25,16 +26,16 @@ public class PersonaDAOImplDBLocal implements PersonaDAO {
 
     @Override
     public void agregarPersona(Persona persona) {
-        System.out.println("Se agrega persona " + persona.toString() + " a base de datos local...");
+        System.out.println("Se agrega persona " + persona.toString() + " a base de datos mysql...");
     }
 
     @Override
     public void actualizarPersona(Persona persona) {
-        System.out.println("Se actualiza persona " + persona.toString() + " a base de datos local...");
+        System.out.println("Se actualiza persona " + persona.toString() + " a base de datos mysql...");
     }
 
     @Override
     public void eliminarPersona(int id) {
-        System.out.println("Se elimina persona con id " + id + " a base de datos local...");
+        System.out.println("Se elimina persona con id " + id + " a base de datos mysql...");
     }
 }

@@ -4,8 +4,8 @@ public class FactoryDao {
 
     public static PersonaDAO getDaoImpl(String opcion) {
         if (opcion.equals("1"))
-            return new PersonaDAOImplDBLocal();
+            return new PersonaDAOImplDBMysql();
         else
-            return new PersonaDAOImplDBProd();
+            return new PersonaDAOImplDBOracle();
     }
 }
